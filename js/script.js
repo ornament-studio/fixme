@@ -3,41 +3,50 @@
 // timer 5 minutes
 function countdown(minutes) {
   var seconds = 60;
-  var mins = minutes
+  var mins = minutes;
   function tick() {
-      //This script expects an element with an ID = "counter". You can change that to what ever you want. 
-      var counter = document.getElementById("timer");
-      var current_minutes = mins-1
-      seconds--;
-      counter.innerHTML = current_minutes.toString() + ":" + (seconds < 10 ? "0" : "") + String(seconds);
-      if( seconds > 0 ) {
-          setTimeout(tick, 1000);
-      } else {
-          if(mins > 1){
-              countdown(mins-1);           
-          }
+    //This script expects an element with an ID = "counter". You can change that to what ever you want.
+    var counter = document.getElementById("timer");
+    var current_minutes = mins - 1;
+    seconds--;
+    counter.innerHTML =
+      current_minutes.toString() +
+      ":" +
+      (seconds < 10 ? "0" : "") +
+      String(seconds);
+    if (seconds > 0) {
+      setTimeout(tick, 1000);
+    } else {
+      if (mins > 1) {
+        countdown(mins - 1);
       }
+    }
   }
   tick();
 }
 
 countdown(5);
 
-// // faq section
+// faq section
 
-// let buttons = document.querySelectorAll(".faq__header");
-// let content = document.querySelectorAll(".faq__item");
+let accItem = document.getElementsByClassName("faq__item");
+let accHD = document.getElementsByClassName("faq__question");
+console.log(accItem);
+console.log(accHD);
 
-// buttons.forEach(function (button) {
-//   button.addEventListener("click", function () {
-//     let index = Array.prototype.indexOf.call(buttons, button);
-//     if (content[index].classList.contains("open")) {
-//       content[index].classList.remove("open");
-//     } else {
-//       content[index].classList.add("open");
-//     }
-//   });
-// });
+for (i = 0; i < accHD.length; i++) {
+  accHD[i].addEventListener("click", toggleItem, false);
+}
+
+function toggleItem() {
+  let itemClass = this.parentNode.className;
+  for (i = 0; i < accItem.length; i++) {
+    accItem[i].className = "faq__item close";
+  }
+  if (itemClass == "faq__item close") {
+    this.parentNode.className = "faq__item open";
+  }
+}
 
 // // carts show descriptions
 
@@ -79,24 +88,122 @@ if (navLinks) {
   });
 }
 
+// sliders
+$(document).ready(function () {
+  // events
+  $(".about__items").slick({
+    slidesToScroll: 3,
+    slidesToShow: 5,
+    autoplay: false,
+    infinite: true,
+    autoplaySpeed: 1500,
+    responsive: [
+      {
+        breakpoint: 1050,
+        settings: {
+          slidesToShow: 4,
+          slidesToScroll: 2,
+        },
+      },
+      {
+        breakpoint: 769,
+        settings: {
+          slidesToShow: 3,
+          slidesToScroll: 2,
+          variableWidth: true,
+        },
+      },
+      {
+        breakpoint: 480,
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1,
+          variableWidth: true,
+        },
+      },
+    ],
+  });
+  $(".result__items").slick({
+    slidesToScroll: 3,
+    slidesToShow: 5,
+    autoplay: false,
+    infinite: true,
+    autoplaySpeed: 1500,
+    variableWidth: true,
+    responsive: [
+      {
+        breakpoint: 1050,
+        settings: {
+          slidesToShow: 4,
+          slidesToScroll: 2,
+        },
+      },
+      {
+        breakpoint: 769,
+        settings: {
+          slidesToShow: 3,
+          slidesToScroll: 2,
+          centerMode: true,
+        },
+      },
+      {
+        breakpoint: 480,
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1,
+          centerMode: true,
+        },
+      },
+    ],
+  });
 
-// // sliders
-// $(document).ready(function () {
-//   // events
-//   $(".calendar__slider").slick({
-//     slidesToScroll: 1,
-//     variableWidth: true,
-//     autoplay: false,
-//     infinite: true,
-//     autoplaySpeed: 2000,
-//   });
-//   $(".reviews__slider").slick({
-//     slidesToScroll: 1,
-//     variableWidth: true,
-//     centerMode: true,
-//     autoplay: false,
-//     infinite: true,
-//     autoplaySpeed: 2000,
-//   });
+  $(".program__items").slick({
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    mobileFirst: true,
+    infinite: false,
+    responsive: [
+      {
+        breakpoint: 480,
+        settings: {
+          slidesToShow: 2,
+          slidesToScroll: 1,
+        },
+      },
+      {
+        breakpoint: 769,
+        settings: "unslick",
+      },
+    ],
+  });
 
-// });
+
+  $(".reviews__items").slick({
+    slidesToScroll: 3,
+    slidesToShow: 2,
+    autoplay: false,
+    infinite: true,
+    autoplaySpeed: 1500,
+    variableWidth: true,
+    responsive: [
+      {
+        breakpoint: 769,
+        settings: {
+          slidesToShow: 3,
+          slidesToScroll: 2,
+         
+        },
+      },
+      {
+        breakpoint: 480,
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1,
+
+        },
+      },
+    ],
+  });
+});
+
+
