@@ -1149,9 +1149,8 @@ section {
 }
 
 .faq__container {
-  display: grid;
+  display: flex;
   gap: 50px;
-  grid-template-columns: auto 320px;
 }
 
 .faq__item {
@@ -1229,6 +1228,30 @@ section {
   transition: all 250ms;
 }
 
+.faq__support {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 30px;
+}
+.faq__support h3 {
+  color: #3c2c3e;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 18px; /* 112.5% */
+}
+.faq__support a {
+  width: 32px;
+  height: 32px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 14px;
+  background-color: #55d3ff;
+  border-radius: 4px;
+  background-image: url(../img/next.svg);
+}
+
 .faq__form-block {
   border-radius: 30px;
   background: #fff;
@@ -1238,6 +1261,7 @@ section {
   height: -moz-fit-content;
   height: fit-content;
   margin-bottom: 20px;
+  max-width: 320px;
 }
 
 .form label {
@@ -1267,7 +1291,7 @@ section {
 .form input[type=submit] {
   margin-bottom: 0px;
   border-radius: 80px;
-  background: #FF88EB;
+  background: #ff88eb;
   color: #fff;
 }
 .form input::-moz-placeholder {
@@ -1348,7 +1372,11 @@ section {
   }
   [class*=_btn] {
     border-radius: 80px;
-    font-size: 16px;
+    height: 48px;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
   }
   h1 {
     font-size: 25px;
@@ -1668,6 +1696,36 @@ section {
   .rate.vip .list li {
     width: 100%;
   }
+  .faq__item .faq__question {
+    padding: 16px 0;
+  }
+  .faq__item .faq__question h4 {
+    font-size: 13px;
+    font-weight: 500;
+    line-height: 18px; /* 138.462% */
+  }
+  .faq__item .faq__answer p {
+    font-size: 12px;
+  }
+  .faq__item button {
+    width: 22px;
+    height: 22px;
+  }
+  .faq__item button span {
+    width: 10px;
+  }
+  .faq__support {
+    margin-top: 20px;
+  }
+  .faq__support h3 {
+    font-size: 14px;
+    line-height: normal; /* 112.5% */
+  }
+  .faq__support a {
+    width: 22px;
+    height: 22px;
+    background-size: 10px;
+  }
 }
 /* Portrait phones and smaller */
 @media (max-width: 480px) {
@@ -1729,6 +1787,43 @@ section {
   .rate.vip .list li {
     width: 100%;
     max-width: none;
+  }
+  /* faq section */
+  .faq {
+    padding-top: 0px;
+    margin-top: -60px;
+  }
+  .faq__container {
+    flex-direction: column-reverse;
+  }
+  .faq__form-block {
+    box-shadow: 0px 4px 14px rgba(255, 54, 140, 0.1);
+    margin-bottom: 30px;
+    max-width: none;
+    width: 100%;
+  }
+  .form label {
+    color: #3c2c3e;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 20px; /* 111.111% */
+    display: inline-block;
+    margin-bottom: 10px;
+  }
+  .form input[type=submit] {
+    height: 48px;
+    font-size: 16px;
+    font-weight: 700;
+    line-height: normal;
+  }
+  .form__title {
+    color: #353535;
+    font-size: 25px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 25px; /* 100% */
+    margin-bottom: 20px;
   }
 }
 /* Iphone 5 *//*# sourceMappingURL=style.css.map */
