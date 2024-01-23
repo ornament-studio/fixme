@@ -404,7 +404,7 @@
     }
   }
 
-  .promo__btn {
+  .author__btn {
     display: none;
   }
 
@@ -449,8 +449,31 @@
   }
 
   /* rates section */
+  .rates {
+    padding-top: 40px;
+  }
+  .rates__subtitle {
+    font-size: 16px;
+    line-height: 19px; /* 118.75% */
+    margin-top: 15px;
+  }
+
   .rates__items {
     grid-template-columns: repeat(2, 1fr);
+  }
+
+  .rates__start {
+    top: -35px;
+    left: inherit;
+    right: 20px;
+    width: 75px;
+    height: 74.453px;
+    font-size: 14px;
+    line-height: normal;
+
+    h5 {
+      font-size: 16px;
+    }
   }
 
   .rate {
@@ -468,7 +491,6 @@
   }
 
   .faq__item {
-  
     .faq__question {
       padding: 16px 0;
 
@@ -479,33 +501,28 @@
       }
     }
     .faq__answer {
-
-
-    p {
-      font-size: 12px;
+      p {
+        font-size: 12px;
+      }
     }
-  }
 
     button {
       width: 22px;
       height: 22px;
 
-  
       span {
         width: 10px;
       }
     }
-  
   }
   .faq__support {
-
     margin-top: 20px;
 
     h3 {
       font-size: 14px;
       line-height: normal; /* 112.5% */
     }
-  
+
     a {
       width: 22px;
       height: 22px;
@@ -513,13 +530,51 @@
     }
   }
 
-  
+  /* footer */
+
+  .footer {
+    padding-top: 60px;
+  }
+
+  .footer {
+    .nav {
+      grid-template-columns: 1fr;
+      gap: 6px;
+    }
+  }
+  .footer__container {
+    padding-top: 0;
+    grid-template-columns: 100%;
+    position: relative;
+    align-items: start;
+    gap: 30px;
+  }
+  .footer__logo {
+    position: relative;
+    top: inherit;
+    left: inherit;
+
+    font-size: 16px;
+    letter-spacing: 1.44px;
+  }
+  .footer__social {
+  }
+
+  .footer__other {
+    div {
+      &:nth-child(1) {
+        flex-direction: column;
+        gap: 5px;
+      }
+    }
+  }
 }
 
 /* Portrait phones and smaller */
 @media (max-width: 480px) {
   .promo__image {
-    right: -10px;
+    right: inherit;
+    left: 0;
   }
   .rates {
     padding-bottom: 524px;
@@ -613,15 +668,12 @@
     }
 
     input {
-
-
       &[type="submit"] {
         height: 48px;
         font-size: 16px;
         font-weight: 700;
         line-height: normal;
       }
-
     }
   }
   .form__title {

@@ -162,12 +162,14 @@ $(document).ready(function () {
     slidesToScroll: 1,
     mobileFirst: true,
     infinite: false,
+    variableWidth: true,
     responsive: [
       {
         breakpoint: 480,
         settings: {
           slidesToShow: 2,
           slidesToScroll: 1,
+          variableWidth: true,
         },
       },
       {
