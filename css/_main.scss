@@ -571,6 +571,7 @@ section {
   padding: 37px 0 50px 0;
   overflow: hidden;
 
+
   .slick-track {
     gap: 30px;
   }
@@ -601,15 +602,61 @@ section {
   gap: 20px;
   position: relative;
 
-  span {
-    position: absolute;
-  }
 
   p {
     color: #353535;
     font-size: 14px;
     font-weight: 500;
     line-height: 18px; /* 128.571% */
+    padding-left: 46px;
+    position: relative; 
+    margin-right: -5px;
+
+
+    &::before { 
+      position: absolute;
+      top: 5px;
+      left: 0;
+      height: 35px;
+      width: 35px;
+      content: '';
+      background-position: center;
+      background-size: contain;
+      background-repeat: no-repeat;
+    }
+    &.plechi_sheya { 
+      &::before { 
+        background-image: url(../img/icon/object-icon-1.svg);
+      }
+    }
+
+    &.taz_holka { 
+      &::before { 
+        background-image: url(../img/icon/object-icon-2.svg);
+      }
+    }
+
+    &.bol_spina { 
+      &::before { 
+        background-image: url(../img/icon/object-icon-3.svg);
+      }
+    }
+    &.myazu_taz { 
+      &::before { 
+        background-image: url(../img/icon/object-icon-4.svg);
+      }
+    }
+    &.zhuvot { 
+      &::before { 
+        background-image: url(../img/icon/object-icon-5.svg);
+      }
+    }
+
+    &.spina_sheya { 
+      &::before { 
+        background-image: url(../img/icon/object-icon-6.png);
+      }
+    }
   }
 }
 .image {
@@ -729,12 +776,53 @@ section {
   .day {
     position: relative;
 
+
     h5 {
       color: #3c2c3e;
       font-size: 12px;
       font-weight: 700;
-      line-height: 20px; /* 166.667% */
+      line-height: normal ;
       max-width: 77%;
+      padding-left: 26px;
+      position: relative;
+      padding-bottom: 6px;
+
+      &::before { 
+        position: absolute;
+        top: 50%;
+        transform: translate(0, -50%);
+        left: 0;
+        height: 20px;
+        width: 22px;
+        content: '';
+        background-position: center;
+        background-size: contain;
+        background-repeat: no-repeat;
+      }
+
+      &.workout { 
+        &::before { 
+          background-image: url(../img/icon/workout.svg);
+        }
+      }
+      &.lesson { 
+        &::before { 
+          background-image: url(../img/icon/lesson.svg);
+        }
+      }
+      &.meet { 
+        &::before { 
+          background-image: url(../img/icon/meet.svg);
+        }
+      }
+
+      &.massag { 
+        &::before { 
+          background-image: url(../img/icon/massag.svg);
+        }
+      }
+
+  
     }
 
     p {
@@ -1392,7 +1480,7 @@ section {
     color: #fff;
     display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: 8px auto;
+    gap: 8px 30px;
 
     .nav__link { 
       white-space: nowrap;

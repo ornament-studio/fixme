@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg">
+
+  <symbol id="workout" viewBox="0 0 6 12">
+   <svg width="21" height="20"  fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<mask id="mask0_1250_1246" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="0" y="0" width="21" height="20">
+<path d="M0 0H20.5882V20H0V0Z" fill="url(#pattern0)"/>
+</mask>
+<g mask="url(#mask0_1250_1246)">
+<path d="M-4.7334 -4.98389H22.3346V20.2941H-4.7334V-4.98389Z" fill="#3C2C3E"/>
+</g>
+<defs>
+<pattern id="pattern0" patternContentUnits="objectBoundingBox" width="1" height="1">
+<use xlink:href="#image0_1250_1246" transform="matrix(0.00212054 0 0 0.0021829 -0.0857143 -0.102941)"/>
+</pattern>
+    </symbol>
+  
+</svg>

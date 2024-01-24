@@ -592,14 +592,43 @@ section {
   gap: 20px;
   position: relative;
 }
-.result__item span {
-  position: absolute;
-}
 .result__item p {
   color: #353535;
   font-size: 14px;
   font-weight: 500;
   line-height: 18px; /* 128.571% */
+  padding-left: 46px;
+  position: relative;
+  margin-right: -5px;
+}
+.result__item p::before {
+  position: absolute;
+  top: 5px;
+  left: 0;
+  height: 35px;
+  width: 35px;
+  content: "";
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+.result__item p.plechi_sheya::before {
+  background-image: url(../img/icon/object-icon-1.svg);
+}
+.result__item p.taz_holka::before {
+  background-image: url(../img/icon/object-icon-2.svg);
+}
+.result__item p.bol_spina::before {
+  background-image: url(../img/icon/object-icon-3.svg);
+}
+.result__item p.myazu_taz::before {
+  background-image: url(../img/icon/object-icon-4.svg);
+}
+.result__item p.zhuvot::before {
+  background-image: url(../img/icon/object-icon-5.svg);
+}
+.result__item p.spina_sheya::before {
+  background-image: url(../img/icon/object-icon-6.png);
 }
 
 .image {
@@ -719,8 +748,35 @@ section {
   color: #3c2c3e;
   font-size: 12px;
   font-weight: 700;
-  line-height: 20px; /* 166.667% */
+  line-height: normal;
   max-width: 77%;
+  padding-left: 26px;
+  position: relative;
+  padding-bottom: 6px;
+}
+.program__item .day h5::before {
+  position: absolute;
+  top: 50%;
+  transform: translate(0, -50%);
+  left: 0;
+  height: 20px;
+  width: 22px;
+  content: "";
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+.program__item .day h5.workout::before {
+  background-image: url(../img/icon/workout.svg);
+}
+.program__item .day h5.lesson::before {
+  background-image: url(../img/icon/lesson.svg);
+}
+.program__item .day h5.meet::before {
+  background-image: url(../img/icon/meet.svg);
+}
+.program__item .day h5.massag::before {
+  background-image: url(../img/icon/massag.svg);
 }
 .program__item .day p {
   color: #353535;
@@ -1322,7 +1378,7 @@ section {
   color: #fff;
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 8px auto;
+  gap: 8px 30px;
 }
 .footer .nav .nav__link {
   white-space: nowrap;
