@@ -153,6 +153,16 @@ section {
   width: fit-content;
   text-align: center;
   height: 48px;
+
+  span {
+    background-image: url(../img/button.svg);
+    background-size: contain;
+    background-position: center;
+    margin-left: 5px;
+    display: block;
+    width: 25px;
+    height: 25px;
+  }
 }
 
 [class*="_btn"]:hover {
@@ -453,13 +463,24 @@ section {
 }
 .promo__timer {
   width: 100%;
-  border-radius: 30px;
-  border: 1px solid #ff88eb;
-
   display: flex;
   align-items: center;
   gap: 11px;
   justify-content: center;
+  background-color: #fff;
+  position: relative;
+  border-radius: 30px;
+  margin: 2px;
+
+  &::before { 
+    content: '';
+    width: calc(100% + 2px);
+    height: calc(100% + 2px);
+    background: linear-gradient( rgba(255, 136, 235, 1), rgba(208, 137, 196, 0.2));
+    position: absolute;
+    border-radius: 30px;
+    z-index: -1;
+  }
 }
 
 .promo__timer h3 {
@@ -534,8 +555,7 @@ section {
   flex-direction: column;
   position: relative;
 
-
-  img { 
+  img {
     max-width: 32px;
     max-height: 31px;
     position: absolute;
@@ -583,7 +603,6 @@ section {
   padding: 37px 0 50px 0;
   overflow: hidden;
 
-
   .slick-track {
     gap: 30px;
   }
@@ -614,58 +633,56 @@ section {
   gap: 20px;
   position: relative;
 
-
   p {
     color: #353535;
     font-size: 14px;
     font-weight: 500;
     line-height: 18px; /* 128.571% */
     padding-left: 46px;
-    position: relative; 
+    position: relative;
     margin-right: -5px;
 
-
-    &::before { 
+    &::before {
       position: absolute;
       top: 5px;
       left: 0;
       height: 35px;
       width: 35px;
-      content: '';
+      content: "";
       background-position: center;
       background-size: contain;
       background-repeat: no-repeat;
     }
-    &.plechi_sheya { 
-      &::before { 
+    &.plechi_sheya {
+      &::before {
         background-image: url(../img/icon/object-icon-1.svg);
       }
     }
 
-    &.taz_holka { 
-      &::before { 
+    &.taz_holka {
+      &::before {
         background-image: url(../img/icon/object-icon-2.svg);
       }
     }
 
-    &.bol_spina { 
-      &::before { 
+    &.bol_spina {
+      &::before {
         background-image: url(../img/icon/object-icon-3.svg);
       }
     }
-    &.myazu_taz { 
-      &::before { 
+    &.myazu_taz {
+      &::before {
         background-image: url(../img/icon/object-icon-4.svg);
       }
     }
-    &.zhuvot { 
-      &::before { 
+    &.zhuvot {
+      &::before {
         background-image: url(../img/icon/object-icon-5.svg);
       }
     }
 
-    &.spina_sheya { 
-      &::before { 
+    &.spina_sheya {
+      &::before {
         background-image: url(../img/icon/object-icon-6.png);
       }
     }
@@ -788,53 +805,50 @@ section {
   .day {
     position: relative;
 
-
     h5 {
       color: #3c2c3e;
       font-size: 12px;
       font-weight: 700;
-      line-height: normal ;
+      line-height: normal;
       max-width: 77%;
       padding-left: 26px;
       position: relative;
       padding-bottom: 6px;
 
-      &::before { 
+      &::before {
         position: absolute;
         top: 50%;
         transform: translate(0, -50%);
         left: 0;
         height: 20px;
         width: 22px;
-        content: '';
+        content: "";
         background-position: center;
         background-size: contain;
         background-repeat: no-repeat;
       }
 
-      &.workout { 
-        &::before { 
+      &.workout {
+        &::before {
           background-image: url(../img/icon/workout.svg);
         }
       }
-      &.lesson { 
-        &::before { 
+      &.lesson {
+        &::before {
           background-image: url(../img/icon/lesson.svg);
         }
       }
-      &.meet { 
-        &::before { 
+      &.meet {
+        &::before {
           background-image: url(../img/icon/meet.svg);
         }
       }
 
-      &.massag { 
-        &::before { 
+      &.massag {
+        &::before {
           background-image: url(../img/icon/massag.svg);
         }
       }
-
-  
     }
 
     p {
@@ -1444,19 +1458,36 @@ section {
 
   input {
     border-radius: 30px;
-    border: 1px solid #ff88eb;
+    border: none;
     color: #353535;
     font-size: 13px;
     font-style: normal;
     font-weight: 500;
     line-height: 18px; /* 138.462% */
     width: 100%;
-    display: inline-flex;
+    display: flex;
     align-items: center;
     height: 40px;
 
     padding: 0 20px;
     margin-bottom: 20px;
+    position: relative;
+    background-color: #fff;
+    border: 1px solid #ff88eb;
+
+
+    // &::before { 
+    //   content: '';
+    //   width: calc(100% + 2px);
+    //   height: calc(100% + 2px);
+    //   top: 0;
+    //   left: 0;
+    //   background: linear-gradient( rgba(255, 136, 235, 1), rgba(208, 137, 196, 0.2));
+    //   position: absolute;
+    //   border-radius: 30px;
+    //   z-index: -1;
+    // }
+
 
     &[type="submit"] {
       margin-bottom: 0px;
@@ -1494,7 +1525,7 @@ section {
     grid-template-columns: 1fr 1fr;
     gap: 8px 30px;
 
-    .nav__link { 
+    .nav__link {
       white-space: nowrap;
     }
   }
@@ -1546,7 +1577,6 @@ section {
 }
 
 .footer__nav {
-
 }
 .nav {
   color: #fff;
@@ -1559,12 +1589,12 @@ section {
   align-items: end;
   gap: 6vw;
 
-  div { 
+  div {
     display: flex;
     gap: 13px;
   }
 
-  img { 
+  img {
     width: inherit;
   }
   a {

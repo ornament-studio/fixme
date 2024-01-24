@@ -167,6 +167,15 @@ section {
   text-align: center;
   height: 48px;
 }
+[class*=_btn] span {
+  background-image: url(../img/button.svg);
+  background-size: contain;
+  background-position: center;
+  margin-left: 5px;
+  display: block;
+  width: 25px;
+  height: 25px;
+}
 
 [class*=_btn]:hover {
   opacity: 0.9;
@@ -458,12 +467,23 @@ section {
 
 .promo__timer {
   width: 100%;
-  border-radius: 30px;
-  border: 1px solid #ff88eb;
   display: flex;
   align-items: center;
   gap: 11px;
   justify-content: center;
+  background-color: #fff;
+  position: relative;
+  border-radius: 30px;
+  margin: 2px;
+}
+.promo__timer::before {
+  content: "";
+  width: calc(100% + 2px);
+  height: calc(100% + 2px);
+  background: linear-gradient(rgb(255, 136, 235), rgba(208, 137, 196, 0.2));
+  position: absolute;
+  border-radius: 30px;
+  z-index: -1;
 }
 
 .promo__timer h3 {
@@ -1341,18 +1361,21 @@ section {
 }
 .form input {
   border-radius: 30px;
-  border: 1px solid #ff88eb;
+  border: none;
   color: #353535;
   font-size: 13px;
   font-style: normal;
   font-weight: 500;
   line-height: 18px; /* 138.462% */
   width: 100%;
-  display: inline-flex;
+  display: flex;
   align-items: center;
   height: 40px;
   padding: 0 20px;
   margin-bottom: 20px;
+  position: relative;
+  background-color: #fff;
+  border: 1px solid #ff88eb;
 }
 .form input[type=submit] {
   margin-bottom: 0px;
@@ -1683,7 +1706,7 @@ section {
     background: linear-gradient(0deg, #4bd3ff 0%, #ffb0e4 100%);
   }
   .result__items {
-    padding: 20px 0 0px 0;
+    padding: 20px 0 60px 0;
     position: relative;
     z-index: 3;
   }
@@ -1691,19 +1714,12 @@ section {
     gap: 10px;
   }
   .result__items .slick-arrow {
-    background-color: #ff88eb;
-    bottom: 20px;
+    bottom: 0px;
     z-index: 20;
-  }
-  .result__items .slick-arrow.slick-next {
-    background-image: url(../img/next.svg);
-  }
-  .result__items .slick-arrow.slick-prev {
-    background-image: url(../img/prev.svg);
   }
   .result__item {
     border-radius: 40px;
-    padding: 30px 20px 75px 20px;
+    padding: 30px 20px 20px 20px;
     min-width: 320px;
     width: calc(100vw - 40px);
     max-width: 350px;
@@ -1716,8 +1732,8 @@ section {
     border-radius: 20px;
   }
   .result__slide {
-    color: #ff88eb;
-    top: calc(100% - 203px);
+    color: #fff;
+    top: calc(100% - 185px);
     z-index: 20;
   }
   .result__btn {

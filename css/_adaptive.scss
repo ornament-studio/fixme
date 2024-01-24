@@ -263,37 +263,28 @@
   }
 
   .result__items {
-    padding: 20px 0 0px 0;
+    padding: 20px 0 60px 0;
     position: relative;
     z-index: 3;
+
     .slick-track {
       gap: 10px;
     }
 
     .slick-arrow {
-      background-color: #ff88eb;
-      bottom: 20px;
+      bottom: 0px;
       z-index: 20;
     }
 
-    .slick-arrow.slick-next {
-      background-image: url(../img/next.svg);
-    }
 
-    .slick-arrow.slick-prev {
-      background-image: url(../img/prev.svg);
-    }
   }
   .result__item {
     border-radius: 40px;
-
-    padding: 30px 20px 75px 20px;
+    padding: 30px 20px 20px 20px;
     min-width: 320px;
     width: calc(100vw - 40px);
     max-width: 350px;
-
     gap: 25px;
-
     z-index: 2;
   }
   .image {
@@ -303,8 +294,8 @@
   }
 
   .result__slide {
-    color: #ff88eb;
-    top: calc(100% - 203px);
+    color: #fff;
+    top: calc(100% - 185px);
     z-index: 20;
   }
 
